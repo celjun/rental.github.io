@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../css/signup.css">
+</head>
+<body>
+    <div class="signup-container">
+        <h1>Create an Account</h1>
+
+        <!-- Sign Up Form -->
+        <form id="signup-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" placeholder="Enter your email address" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+            <label for="role">Select Role:</label>
+            <select id="role" required>
+                <option value="">Select Role</option>
+                <option value="renter">Renter</option>
+                <option value="owner">Studio Owner</option>
+            </select>
+
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <p id="error-message" style="color: red; display: none;">This email is already registered. Please log in.</p>
+        <p>Already have an account? <a href="login.html">Log In</a></p>
+    </div>
+
+    <!-- Correct script reference -->
+    <script src="../js/signup.js"></script>
+</body>
+</html>

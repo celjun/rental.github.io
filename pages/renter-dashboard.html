@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renter Dashboard</title>
+    <link rel="stylesheet" href="../css/renter-dashboard.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><button id="edit-profile-btn">Edit Profile</button></li>
+                <li><button id="logout-btn">Log Out</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Profile Info</h2>
+        <div id="profile-info">
+            <!-- Profile info will be displayed here -->
+        </div>
+
+        <div id="edit-form" style="display: none;">
+            <h3>Edit Your Profile</h3>
+            <form id="update-profile-form">
+                <label for="edit-name">Name:</label>
+                <input type="text" id="edit-name" placeholder="Enter your name" required><br>
+
+                <label for="edit-email">Email:</label>
+                <input type="email" id="edit-email" placeholder="Enter your email address" required disabled><br>
+
+                <label for="edit-phone">Phone:</label>
+                <input type="tel" id="edit-phone" placeholder="Enter your phone number" required><br>
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+
+        <h2>Available Studio Listings</h2>
+
+        <div class="filter">
+            <h2>Filter Studios</h2>
+            <form id="filterForm">
+                <label for="type">Studio Type:</label>
+                <select id="type" name="type">
+                    <option value="">Any Type</option>
+                    <option value="art">Art Studio</option>
+                    <option value="recording">Recording Studio</option>
+                    <option value="dance">Dance Studio</option>
+                    <option value="rehearsal">Rehearsal Space</option>
+                </select>
+
+                <label for="price-min">Min Price:</label>
+                <input type="number" id="price-min" name="price-min" placeholder="Min price">
+
+                <label for="price-max">Max Price:</label>
+                <input type="number" id="price-max" name="price-max" placeholder="Max price">
+
+                <label for="accommodates">Max Capacity:</label>
+                <input type="number" id="accommodates" name="accommodates" placeholder="Max capacity">
+
+                <label for="available">Available Only:</label>
+                <input type="checkbox" id="available" name="available">
+
+                <button type="submit">Apply Filters</button>
+            </form>
+        </div>
+
+        <div id="studio-list">
+            <!-- Studio listings will be dynamically populated here -->
+        </div>
+    </main>
+
+    <!-- Add this modal container at the end of your body tag -->
+    <div id="listing-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close-btn">&times;</span>
+            <h2>Studio Details</h2>
+            <div id="listing-details">
+                <!-- Full details will be dynamically populated here -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Rental Studio App</p>
+    </footer>
+
+    <script src="../js/renter-dashboard.js"></script>
+</body>
+
+</html>

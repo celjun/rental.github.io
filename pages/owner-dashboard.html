@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Dashboard</title>
+    <link rel="stylesheet" href="../css/owner-dashboard.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><button id="edit-profile-btn">Edit Profile</button></li>
+                <li><button id="logout-btn">Log Out</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <h2>Profile Info</h2>
+        <div id="profile-info">
+            <!-- Profile info will be displayed here -->
+        </div>
+
+        <div id="edit-form" style="display: none;">
+            <h3>Edit Your Profile</h3>
+            <form id="update-profile-form">
+                <label for="edit-name">Name:</label>
+                <input type="text" id="edit-name" placeholder="Enter your name" required><br>
+
+                <label for="edit-email">Email:</label>
+                <input type="email" id="edit-email" placeholder="Enter your email address" required disabled><br>
+
+                <label for="edit-phone">Phone:</label>
+                <input type="tel" id="edit-phone" placeholder="Enter your phone number" required><br>
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+        
+
+        <div id="add-listing-form" style="display: none;">
+            <h3>Add Studio Listing</h3>
+            <form id="listing-form">
+                <input type="text" id="studio-name" placeholder="Studio Name" required><br>
+                <input type="text" id="studio-address" placeholder="Address" required><br>
+                <input type="number" id="studio-area" placeholder="Area (m²)" required><br>
+                <input type="text" id="studio-type" placeholder="Studio Type" required><br>
+                <input type="number" id="studio-capacity" placeholder="Capacity" required><br>
+                <input type="checkbox" id="studio-parking"> Parking Available<br>
+                <input type="checkbox" id="studio-public-transport"> Public Transport Nearby<br>
+                <input type="checkbox" id="studio-available"> Available for Rent<br>
+                <input type="text" id="studio-rental-term" placeholder="Rental Term (Hourly, Daily, etc.)" required><br>
+                <input type="number" id="studio-price" placeholder="Price per Term" required><br>
+                <button type="submit">Add Listing</button>
+            </form>
+        </div>
+
+        <h3>Existing Listings</h3>
+        <div id="studio-listings">
+            <!-- Studio listings will appear here -->
+        </div>
+        
+        <button id="add-listing-btn">Add New Listing</button>
+    </main>
+
+    <script src="../js/owner-dashboard.js"></script>
+</body>
+</html>

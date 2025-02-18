@@ -1,0 +1,41 @@
+/* General styling for the profile page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the profile page */
+.profile-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 28px;
+}
+
+/* Back to Dashboard link */
+.back-to-dashboard {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-dashboard:hover {
+    background-color: #45a049;
